@@ -1,6 +1,6 @@
-# open_reactor_game
+# Open Reactor Game (ORG)
 
-A new Flutter project.
+A multiplayer game inspired by "4 Player Reactor".
 
 ## Getting Started
 

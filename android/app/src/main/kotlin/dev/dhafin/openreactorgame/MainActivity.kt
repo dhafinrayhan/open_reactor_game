@@ -1,4 +1,4 @@
-package com.example.open_reactor_game
+package dev.dhafin.openreactorgame
 
 import io.flutter.embedding.android.FlutterActivity
 
