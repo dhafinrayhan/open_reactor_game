@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'features/match/screens/match.dart';
 import 'utils/extensions.dart';
@@ -10,7 +11,7 @@ void main() {
   // Set app to full screen mode.
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
 
-  runApp(const OrgApp());
+  runApp(const ProviderScope(child: OrgApp()));
 }
 
 class OrgApp extends StatelessWidget {

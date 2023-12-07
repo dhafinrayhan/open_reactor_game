@@ -4,6 +4,8 @@ analyzer:
   language:
     strict-casts: true
     strict-raw-types: true
+  plugins:
+    - custom_lint
 linter:
   rules:
     - directives_ordering
