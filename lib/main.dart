@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'features/match/screens/match.dart';
+import 'utils/extensions.dart';
+
 void main() {
   runApp(const OrgApp());
 }
@@ -23,9 +26,12 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
-        child: Text('Home'),
+        child: FilledButton(
+          onPressed: () => context.pushPage((_) => const MatchScreen()),
+          child: const Text('Play'),
+        ),
       ),
     );
   }
