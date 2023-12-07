@@ -2,6 +2,7 @@ import 'package:flextras/flextras.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
+import '../../../utils/colors.dart';
 import 'widgets/game_box.dart';
 import 'widgets/player_pad.dart';
 
@@ -10,10 +11,10 @@ class MatchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
         child: PaddedColumn(
-          padding: EdgeInsets.symmetric(horizontal: 12, vertical: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 20),
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             SizedBox(
@@ -21,23 +22,39 @@ class MatchScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Expanded(child: PlayerPad()),
-                  Gap(12),
-                  Expanded(child: PlayerPad()),
+                  Expanded(
+                    child: PlayerPad(
+                      color: AppColors.p4,
+                    ),
+                  ),
+                  const Gap(12),
+                  Expanded(
+                    child: PlayerPad(
+                      color: AppColors.p3,
+                    ),
+                  ),
                 ],
               ),
             ),
-            Gap(24),
-            Expanded(child: GameBox()),
-            Gap(24),
+            const Gap(24),
+            const Expanded(child: GameBox()),
+            const Gap(24),
             SizedBox(
               height: 180,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Expanded(child: PlayerPad()),
-                  Gap(12),
-                  Expanded(child: PlayerPad()),
+                  Expanded(
+                    child: PlayerPad(
+                      color: AppColors.p1,
+                    ),
+                  ),
+                  const Gap(12),
+                  Expanded(
+                    child: PlayerPad(
+                      color: AppColors.p2,
+                    ),
+                  ),
                 ],
               ),
             ),
