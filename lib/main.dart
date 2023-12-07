@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'features/match/screens/match.dart';
 import 'utils/extensions.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Set app to full screen mode.
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+
   runApp(const OrgApp());
 }
 
