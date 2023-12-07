@@ -4,10 +4,10 @@ class AppColors {
   AppColors._();
 
   // Player colors.
-  static Color p1 = Colors.indigo;
-  static Color p2 = Colors.blue;
-  static Color p3 = Colors.cyan;
-  static Color p4 = Colors.teal;
+  static MaterialColor p1 = Colors.indigo;
+  static MaterialColor p2 = Colors.blue;
+  static MaterialColor p3 = Colors.cyan;
+  static MaterialColor p4 = Colors.teal;
 
-  static Color red = Colors.red;
+  static MaterialColor red = Colors.red;
 }

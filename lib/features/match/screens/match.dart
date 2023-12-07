@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:flextras/flextras.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -19,21 +21,26 @@ class MatchScreen extends StatelessWidget {
           children: [
             SizedBox(
               height: 180,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Expanded(
-                    child: PlayerPad(
-                      color: AppColors.p4,
+              child: Transform.rotate(
+                angle: math.pi,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: PlayerPad(
+                        color: AppColors.p3,
+                        position: PlayerPadPosition.left,
+                      ),
                     ),
-                  ),
-                  const Gap(12),
-                  Expanded(
-                    child: PlayerPad(
-                      color: AppColors.p3,
+                    const Gap(12),
+                    Expanded(
+                      child: PlayerPad(
+                        color: AppColors.p4,
+                        position: PlayerPadPosition.right,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
             const Gap(24),
@@ -41,21 +48,26 @@ class MatchScreen extends StatelessWidget {
             const Gap(24),
             SizedBox(
               height: 180,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Expanded(
-                    child: PlayerPad(
-                      color: AppColors.p1,
+              child: Transform.rotate(
+                angle: 0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: PlayerPad(
+                        color: AppColors.p1,
+                        position: PlayerPadPosition.left,
+                      ),
                     ),
-                  ),
-                  const Gap(12),
-                  Expanded(
-                    child: PlayerPad(
-                      color: AppColors.p2,
+                    const Gap(12),
+                    Expanded(
+                      child: PlayerPad(
+                        color: AppColors.p2,
+                        position: PlayerPadPosition.right,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ],
