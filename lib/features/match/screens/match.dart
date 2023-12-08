@@ -1,5 +1,3 @@
-import 'dart:math' as math;
-
 import 'package:flextras/flextras.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -21,8 +19,8 @@ class MatchScreen extends StatelessWidget {
           children: [
             SizedBox(
               height: 180,
-              child: Transform.rotate(
-                angle: math.pi,
+              child: RotatedBox(
+                quarterTurns: 2,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -48,8 +46,8 @@ class MatchScreen extends StatelessWidget {
             const Gap(24),
             SizedBox(
               height: 180,
-              child: Transform.rotate(
-                angle: 0,
+              child: RotatedBox(
+                quarterTurns: 0,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
