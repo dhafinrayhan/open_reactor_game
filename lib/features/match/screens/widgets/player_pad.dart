@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 
-class PlayerPad extends StatelessWidget {
-  const PlayerPad({super.key, required this.color, required this.position});
+import '../../models/player.dart';
 
-  final MaterialColor color;
+class PlayerPad extends StatelessWidget {
+  const PlayerPad({
+    super.key,
+    required this.player,
+    required this.position,
+  });
+
+  final Player player;
   final PlayerPadPosition position;
 
   @override
@@ -24,12 +30,12 @@ class PlayerPad extends StatelessWidget {
           right: position == PlayerPadPosition.right ? 20 : null,
           top: 8,
           child: Text(
-            '0',
+            player.score.toString(),
             textAlign: switch (position) {
               PlayerPadPosition.left => TextAlign.start,
               PlayerPadPosition.right => TextAlign.end,
             },
-            style: TextStyle(fontSize: 32, color: color.shade300),
+            style: TextStyle(fontSize: 32, color: player.color.shade300),
           ),
         ),
         Positioned.fill(
@@ -37,7 +43,7 @@ class PlayerPad extends StatelessWidget {
             type: MaterialType.transparency,
             child: InkWell(
               onTap: () {},
-              splashColor: color,
+              splashColor: player.color,
               borderRadius: borderRadius,
               child: const SizedBox(
                 width: double.infinity,
